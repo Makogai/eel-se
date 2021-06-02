@@ -1,15 +1,4 @@
-
-import tkinter as tk
-from tkinter import *
-import PIL
-from PIL import Image, ImageTk
-from urllib.request import urlopen
-from io import BytesIO
 import instaloader
-from datetime import datetime
-from tkinter import messagebox
-from pathlib import Path
-import json
 import base64
 import requests
 
