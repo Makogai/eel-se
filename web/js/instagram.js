@@ -26,12 +26,15 @@ function instagram_show(data) {
   let bio = $(".bio");
 
   let is_verified = data.is_verified;
+  let is_private = data.is_private;
 
   $(".check")
     .removeClass(is_verified ? "hidden" : "")
     .addClass(is_verified ? "" : "hidden");
+  $(".lock")
+    .removeClass(is_private ? "hidden" : "")
+    .addClass(is_private ? "" : "hidden");
 
-  console.log(data.profile_pic);
   username.text(data.username);
   full_name.text(data.full_name);
   bio.text(data.bio);
@@ -42,18 +45,6 @@ function instagram_show(data) {
   loader.addClass("invisivle");
 }
 
-const getBase64FromUrl = async (url) => {
-  const data = await fetch(url, { mode: "no-cors" });
-  const blob = await data.blob();
-  return new Promise((resolve) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(blob);
-    reader.onloadend = () => {
-      const base64data = reader.result;
-      resolve(base64data);
-    };
-  });
-};
 
 function kFormatter(num, digits = 2) {
   const lookup = [
@@ -78,6 +69,10 @@ function kFormatter(num, digits = 2) {
 
 tippy('.check', {
     content: 'Verified',
+    placement: 'right',
+  });
+tippy('.lock', {
+    content: 'Private account',
     placement: 'right',
   });
 

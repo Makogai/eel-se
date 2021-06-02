@@ -19,6 +19,7 @@ def get_user(username):
     name = profile.full_name
     bio = profile.biography
     is_verified = profile.is_verified
+    is_private = profile.is_private
 
     URL = profile_pic
     photo = get_as_base64(URL)
@@ -32,7 +33,8 @@ def get_user(username):
         'full_name': name,
         'bio': bio,
         'profile_pic': str(photo)[2:-1],
-        'is_verified': is_verified
+        'is_verified': is_verified,
+        'is_private': is_private
     }
     # print(is_verified)
     return data
