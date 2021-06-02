@@ -1,12 +1,14 @@
 import eel
 import random
 from datetime import datetime
+from instagram import get_user
 
 eel.init('web')
 
 @eel.expose
-def get_random_name():
-    eel.prompt_alerts('Random name')
+def get_profile(username):
+    # get_user("makogai")
+    eel.instagram_show(get_user(username))
 
 @eel.expose
 def get_random_number():
@@ -20,4 +22,11 @@ def get_date():
 def get_ip():
     eel.prompt_alerts('127.0.0.1')
 
-eel.start('index.html')
+my_options = {
+    'mode': "chrome", #or "chrome-app",
+    'host': 'localhost',
+    'port': 8080,
+    'chromeFlags': ["--start-fullscreen", "--browser-startup-dialog"]
+}
+
+eel.start('index.html', option=my_options)
