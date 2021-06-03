@@ -17315,7 +17315,7 @@
   .card.bg-warning,
   .card.card-rotate.bg-warning .front,
   .card.card-rotate.bg-warning .back {
-    background: linear-gradient(60deg, #ffa726, #fb8c00);
+    color: white;
   }
   
   .card .card-header-danger .card-icon,
@@ -17357,7 +17357,7 @@
   .card .card-header-warning .card-icon,
   .card .card-header-warning:not(.card-header-icon):not(.card-header-text),
   .card .card-header-warning .card-text {
-    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(255, 152, 0, 0.4);
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 5px -5px rgba(255, 152, 0, 0.4);
   }
   
   .card .card-header-info .card-icon,
@@ -20578,7 +20578,7 @@
   .dark-edition .card.bg-warning,
   .dark-edition .card.card-rotate.bg-warning .front,
   .dark-edition .card.card-rotate.bg-warning .back {
-    background: linear-gradient(60deg, #f5700c, #ff9800);
+    background-color: t;
   }
   
   .dark-edition .card .card-header-success .card-icon,
@@ -20596,7 +20596,7 @@
   .dark-edition .card.bg-danger,
   .dark-edition .card.card-rotate.bg-danger .front,
   .dark-edition .card.card-rotate.bg-danger .back {
-    background: linear-gradient(60deg, #d22824, #da3a36);
+    background: transparent;
   }
   
   .dark-edition .card .card-header-info .card-icon,
@@ -20606,6 +20606,24 @@
   .dark-edition .card.card-rotate.bg-info .front,
   .dark-edition .card.card-rotate.bg-info .back {
     background: linear-gradient(60deg, #029eb1, #25b1c3);
+  }
+  <!--Class for link_card_icon from FS-->
+  .dark-edition .card .card-header-smolo .card-icon,
+  .dark-edition .card .card-header-smolo .card-text,
+  .dark-edition .card .card-header-smolo:not(.card-header-icon):not(.card-header-text),
+  .dark-edition .card.bg-danger,
+  .dark-edition .card.card.card-rotate.bg-danger.font,
+  .dark-edition .card.card-rotate.bg-danger .back{
+   background: linear-gradient(60deg, #d22824, #da3a36);
+  }
+  <!--Class for pain_card_icon_color from FS-->
+  .dark-edition .card .card-header-green .card-icon,
+  .dark-edition .card .card-header-green .card-text,
+  .dark-edition .card .card-header-green:not(.card-header-icon):not(.card-header-text),
+  .dark-edition .card.bg-green,
+  .dark-edition .card.card-rotate.bg-green .front,
+  .dark-edition .card.card-rotate.bg-green .back {
+    background-color: transparent;
   }
   
   .dark-edition .card .card-header-primary .card-icon,
