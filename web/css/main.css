@@ -129,6 +129,31 @@ form input[type=text]:focus {
 .lock i{
   color: rgb(0, 110, 255);
 }
+
+.dashboard{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 5px;
+  padding: 8px 20px;
+  width: auto;
+  background: #1abc9c;
+  text-decoration: none;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  clear: right;
+  transition: 0.2s ease all;
+  background: linear-gradient(to bottom right, #6452E9, #639FF9);
+}
+
+.dashboard:hover {
+  opacity: 0.8;
+}
+
 .header{
   color: #2D354A;
   font-size: 24px;
