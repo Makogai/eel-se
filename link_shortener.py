@@ -1,7 +1,7 @@
 import pyshorteners
 
 
-def shorten_link(link):
+def get_url(link):
     urls = link
     s = pyshorteners.Shortener()
     tinyurl = s.tinyurl.short(urls)
