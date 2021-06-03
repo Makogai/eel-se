@@ -64,15 +64,6 @@
     height: 100%;
 }
 
-.bg-transparent-1 {
-    transition: all 0.5s;
-    background-color: rgba(11, 22, 34, 0.3);
-}
-
-.bg-transparent-2 {
-    transition: all 0.5s;
-    background-color: rgba(11, 22, 34, 0.6) !important;
-}
 
 .navbar .active {
     border-bottom: 2px solid white;
