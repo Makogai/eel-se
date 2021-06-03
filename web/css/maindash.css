@@ -143,7 +143,7 @@
   
   .okvirspan{
     position: absolute;
-    height: 95%;
+    height: 98%;
     width: 98%;
     background-color: #1a2035;
     transition: background 0.5s ease;
@@ -156,4 +156,8 @@
   
   .okvir:hover .okvirspan {
     background: transparent!important;
+  }
+  .image{
+    width: 100%;
+    height: 275px;
   }
