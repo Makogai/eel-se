@@ -92,7 +92,7 @@ form input[type=text]:focus {
   border-radius: 10px;
   z-index: 1000;
   transition: 0.5s all;
-  background-image: url("../asstes/images/loader.gif");
+  background-image: url("../assets/images/loader.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 40%;
