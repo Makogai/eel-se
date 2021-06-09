@@ -1,6 +1,10 @@
 import pygame
 import time
 import random
+from tkinter import *
+from tkinter import messagebox
+Tk().wm_withdraw() #to hide the main window
+
 
 def play_snake():
     pygame.init()
@@ -21,14 +25,13 @@ def play_snake():
     block_size = 50
 
     font = pygame.font.SysFont(None, 25)
+    hs_file = open('snake_hs.txt', 'r+')
 
     #Setting high score
     def get_highscore():
-        hs_file = open('snake_hs.txt')
-        hs = hs_file.readline()
-        print(hs)
-        return hs
-    get_highscore()
+        hs_file_hs = open('snake_hs.txt', 'r+').readline()
+        hs = hs_file_hs.strip()
+        return int(hs)
 
     def snake(block_size, snakeList, snakeHead, lead_x, lead_y):
         for XnY in snakeList:
@@ -40,7 +43,7 @@ def play_snake():
         gameDisplay.blit(screen_text, [x,y])
 
     gameDisplay = pygame.display.set_mode((800,600))
-    pygame.display.set_caption("Slithery Snake")
+    pygame.display.set_caption("PyFy - Snake")
 
     def gameLoop():
         gameExit = False
@@ -62,13 +65,24 @@ def play_snake():
         while not gameExit:
             while gameOver == True:
                 gameDisplay.fill(gameover)
-                message_to_screen("Your snake has died! Press C to continue or Q to quit.", white, 180,280)
+                message_to_screen("Poginuli ste! Kliknite ENTER da nastavite, ili Q da izađete.", white, 180,280)
                 message_to_screen(''.join(["Your score was: ",str(score)]), white, 300, 325)
                 pygame.display.update()
 
+
+                #Overwriting highscore
+                if score > get_highscore():
+                    messagebox.showinfo('Čestitamo!','Novi Highscore!')
+                    pygame.display.update()
+                    print("NEW HIGHSCORE!")
+                    hs_file.seek(0)
+                    hs_file.write(str(score))
+                    hs_file.truncate()
+
+
                 for event in pygame.event.get():
                     if event.type == pygame.KEYDOWN:
-                        if event.key == pygame.K_c:
+                        if event.key == pygame.K_RETURN:
                             gameLoop()
                         if event.key == pygame.K_q:
                             gameExit = True
@@ -101,6 +115,7 @@ def play_snake():
             lead_y += lead_y_change
             gameDisplay.fill(white)
             message_to_screen(''.join(["Score: ",str(score)]), black, 10,10)
+            message_to_screen(''.join(["High Score: ",str(get_highscore()) if get_highscore() > score else str(score)]), black, 10,30)
             pygame.draw.rect(gameDisplay, black, [randAppleX, randAppleY, block_size, block_size])
 
             snakeHead = []
@@ -130,3 +145,4 @@ def play_snake():
         pygame.quit()
 
     gameLoop()
+play_snake()
