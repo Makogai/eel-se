@@ -3,6 +3,7 @@ import random
 from datetime import datetime
 from instagram import get_user
 from link_shortener import get_url
+from snake_game import play_snake
 
 eel.init('web')
 
@@ -17,16 +18,11 @@ def get_shortened_url(link):
     eel.shorten_link(get_url(link))
 
 @eel.expose
-def get_random_number():
-    eel.prompt_alerts(random.randint(1, 100))
+def snake():
+    # get_user("makogai")
+    play_snake()
 
-@eel.expose
-def get_date():
-    eel.prompt_alerts(datetime.now().strftime("%d/%m/%Y %H:%M:%S"))
 
-@eel.expose
-def get_ip():
-    eel.prompt_alerts('127.0.0.1')
 
 my_options = {
     'mode': "chrome", #or "chrome-app",
@@ -36,3 +32,4 @@ my_options = {
 }
 
 eel.start('index.html', option=my_options)
+# eel.start('index.html', option=my_options)

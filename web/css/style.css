@@ -38,6 +38,9 @@
 .bg-main {
     background-color: rgb(var(--color-background));
 }
+.a{
+    background-color: #9fadbd;
+}
 
 .bg-secondary {
     background-color: rgb(var(--color-foreground));
