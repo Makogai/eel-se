@@ -4,6 +4,7 @@ import random
 from tkinter import *
 from tkinter import messagebox
 Tk().wm_withdraw() #to hide the main window
+from playsound import playsound
 
 
 def play_snake():
@@ -12,8 +13,6 @@ def play_snake():
     white = (11, 22, 34)
     black = (159, 173, 189)
     red = (255,0,0)
-    green = (0,255,0)
-    blue = (0,0,255)
     purple = (1,133,223)
     gameover = (1,133,223)
 
@@ -27,6 +26,9 @@ def play_snake():
     font = pygame.font.SysFont(None, 25)
     hs_file = open('snake_hs.txt', 'r+')
 
+    eat_sound = pygame.mixer.Sound("./python/assets/sounds/eat.wav")
+    game_over_sound = pygame.mixer.Sound("./python/assets/sounds/game_over.wav")
+    victory_sound = pygame.mixer.Sound("./python/assets/sounds/victory.wav")
     #Setting high score
     def get_highscore():
         hs_file_hs = open('snake_hs.txt', 'r+').readline()
@@ -69,9 +71,14 @@ def play_snake():
                 message_to_screen(''.join(["Your score was: ",str(score)]), white, 300, 325)
                 pygame.display.update()
 
+                play_game_over = True
+                if play_game_over:
+                    game_over_sound.play()
+                    play_game_over = False
 
                 #Overwriting highscore
                 if score > get_highscore():
+                    victory_sound.play()
                     messagebox.showinfo('Čestitamo!','Novi Highscore!')
                     pygame.display.update()
                     print("NEW HIGHSCORE!")
@@ -136,6 +143,7 @@ def play_snake():
                 randAppleY = round(random.randrange(0, display_height - block_size)/block_size)*block_size
                 snakeLength += 1
                 score += 1
+                eat_sound.play()
                 message_to_screen(''.join(["Score: ",str(score)]), black, 10,10)
 
             pygame.display.update()
