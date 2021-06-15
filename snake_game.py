@@ -4,7 +4,9 @@ import random
 from tkinter import *
 from tkinter import messagebox
 Tk().wm_withdraw() #to hide the main window
-from playsound import playsound
+import pygame_menu
+
+
 
 
 def play_snake():
@@ -19,8 +21,11 @@ def play_snake():
     display_width = 800
     display_height = 600
 
+    surface = pygame.display.set_mode((display_width, display_height))
+
+
     clock = pygame.time.Clock()
-    fps = 10
+    fps = 5
     block_size = 50
 
     font = pygame.font.SysFont(None, 25)
@@ -39,6 +44,9 @@ def play_snake():
         for XnY in snakeList:
             pygame.draw.rect(gameDisplay, purple, [XnY[0],XnY[1],block_size,block_size])
             pygame.draw.rect(gameDisplay, red, [lead_x,lead_y,block_size,block_size])
+
+    def start_the_game():
+        gameLoop()
 
     def message_to_screen(msg,color,x,y):
         screen_text = font.render(msg, True, color)
@@ -151,6 +159,13 @@ def play_snake():
             clock.tick(fps)
 
         pygame.quit()
+    # menu = pygame_menu.Menu(300, 400, 'Welcome',
+    #                    theme=pygame_menu.themes.THEME_BLUE)
 
+    # menu.add.text_input('Name :', default='John Doe')
+    # menu.add.selector('Difficulty :', [('Hard', 1), ('Easy', 2)])
+    # menu.add.button('Play', start_the_game)
+    # menu.add.button('Quit', pygame_menu.events.EXIT)
     gameLoop()
-play_snake()
+    # menu.mainloop(surface)
+# play_snake()
