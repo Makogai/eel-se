@@ -1,9 +1,9 @@
 import eel
 import random
 from datetime import datetime
-from instagram import get_user
-from link_shortener import get_url
-from snake_game import play_snake
+from python.scripts.instagram import get_user
+from python.scripts.link_shortener import get_url
+from python.scripts.snake_game import play_snake
 
 eel.init('web')
 
