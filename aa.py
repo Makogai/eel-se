@@ -44,10 +44,22 @@
 #     menu.mainloop(surface)
 
 import mysql.connector
+import os
+from dotenv import load_dotenv
 
-cnx = mysql.connector.connect(user='epiz_28218456', password='bGJDjsD5cDTnCiF',
-                              host='sql200.epizy.com',
-                              database='epiz_28218456_se')
+load_dotenv()
+
+db_user = os.environ.get("DB_USER")
+db_host = os.environ.get("DB_HOST")
+db_password = os.environ.get("DB_PASSWORD")
+db_db = os.environ.get("DB_DB")
+
+cnx = mysql.connector.connect(user=db_user, password=db_password,
+                              host=db_host,
+                              database=db_db)
+# cnx = mysql.connector.connect(user='JFE91oFydO', password='2qsdEuu8SG',
+#                               host='remotemysql.com',
+#                               database='JFE91oFydO')
 cursor = cnx.cursor()
 
 query = ("SELECT * from snake_highscores")
@@ -55,9 +67,9 @@ query = ("SELECT * from snake_highscores")
 
 cursor.execute(query)
 
-for (first_name, last_name, hire_date) in cursor:
-  print("{}, {} was hired on {:%d %b %Y}".format(
-    last_name, first_name, hire_date))
+for (id, username, score,date) in cursor:
+  print("[{}] {}, Score: {} was achieved on {:%d %b %Y %H:%M}".format(
+    id, username, score, date))
 
 cursor.close()
 cnx.close()
