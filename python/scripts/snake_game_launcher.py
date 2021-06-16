@@ -5,6 +5,7 @@ from pygame_menu.examples import create_example_window
 
 from typing import Tuple, Any
 
+
 surface = create_example_window('PyFy - Snake Game', (800, 600))
 
 
@@ -33,6 +34,6 @@ difficulty = 1
 menu.add.button('Igraj', start_the_game)
 menu.add.button('Izađi', pygame_menu.events.EXIT)
 
-if __name__ == '__main__':
+def play_snake():
     menu.mainloop(surface)
 

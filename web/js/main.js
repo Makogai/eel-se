@@ -7,8 +7,8 @@ document.getElementById("snake").addEventListener(
   );
   
   
-  eel.expose(snake);
-  function instagram_show(data) {
-  }
-  
+  tippy('#snake_hs', {
+    content: 'Leaderboard',
+    placement: 'top',
+  });
   

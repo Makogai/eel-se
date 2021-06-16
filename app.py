@@ -3,7 +3,6 @@ import random
 from datetime import datetime
 from python.scripts.instagram import get_user
 from python.scripts.link_shortener import get_url
-from python.scripts.snake_game import play_snake
 
 eel.init('web')
 
@@ -19,8 +18,9 @@ def get_shortened_url(link):
 
 @eel.expose
 def snake():
+    from python.scripts.snake_game import play_snake_menu
     # get_user("makogai")
-    play_snake()
+    play_snake_menu()
 
 
 
