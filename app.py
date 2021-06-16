@@ -3,6 +3,7 @@ import random
 from datetime import datetime
 from python.scripts.instagram import get_user
 from python.scripts.link_shortener import get_url
+from python.scripts.snake_hs import get_hs
 
 eel.init('web')
 
@@ -15,6 +16,12 @@ def get_profile(username):
 def get_shortened_url(link):
     # get_user("makogai")
     eel.shorten_link(get_url(link))
+
+
+@eel.expose
+def snake_hs():
+    # get_user("makogai")
+    eel.snake_fill_hs(get_hs())
 
 @eel.expose
 def snake():

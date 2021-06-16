@@ -84,7 +84,7 @@ def play_snake(difficulty,user_name):
         query_data = (user_name,score)
         print(query_data)
         cursor.execute(query, query_data)
-        
+
         cnx.commit()
         cursor.close()
         cnx.close()
@@ -241,6 +241,6 @@ menu.add.button('Izađi', pygame_menu.events.EXIT)
 
 def play_snake_menu():
     menu.mainloop(surface)
-play_snake_menu()
+    play_snake_menu()
 
 
