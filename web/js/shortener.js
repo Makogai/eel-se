@@ -1,7 +1,7 @@
 document.getElementById("get_data").addEventListener(
   "click",
   () => {
-    let link = document.querySelector("#username").value;
+    let link = document.querySelector("#link").value;
     let loader = $(".loader");
     loader.removeClass("invisivle");
     eel.get_shortened_url(link);
@@ -18,9 +18,15 @@ eel.expose(shorten_link);
 function shorten_link(data) {
     let loader = $(".loader");
 
-  let result = $(".result");
+  let tinyurl = $("#tinyurl");
+  let dagd = $("#dagd");
+  let osdb = $("#osdb");
+  let adfly = $("#adfly");
 
-  result.text(data.tinyurl);
+  tinyurl.val(data['tinyurl'])
+  dagd.val(data['dagd'])
+  osdb.val(data['osdb'])
+  adfly.val(data['adfly'])
 
   loader.addClass("invisivle");
 }
@@ -29,7 +35,7 @@ function shorten_link(data) {
 
 
 
-  var input = document.getElementById("username");
+  var input = document.getElementById("link");
 
 // Execute a function when the user releases a key on the keyboard
 input.addEventListener("keyup", function(event) {
