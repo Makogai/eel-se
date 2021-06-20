@@ -298,7 +298,7 @@ ol {
 .menu-social a {
 	display: block;
 	font-size: 18px;
-	color: #252525;
+	color: #b2b2b2;
 	margin-bottom: 50px;
 }
 
@@ -321,7 +321,7 @@ ol {
 	overflow-y: auto;
 	-webkit-box-shadow: 14px 0px 103px rgba(0, 0, 0, 0.08);
 	box-shadow: 14px 0px 103px rgba(0, 0, 0, 0.08);
-	background-color: #fff;
+	background-color: #1A2035;
 	z-index: 9999;
 	opacity: 0;
 	filter: alpha(opacity=0);
@@ -416,7 +416,7 @@ ol {
 	display: block;
 	font-size: 30px;
 	font-weight: 600;
-	color: #b2b2b2;
+	color: #ffffff;
 	-webkit-transition: 0.3s;
 	-o-transition: 0.3s;
 	transition: 0.3s;
@@ -431,7 +431,7 @@ ol {
 
 .main-menu ul li a:hover,
 .main-menu ul li a.active {
-	color: #2916e0;
+	color: #024bde;
 }
 
 .sm-footer {

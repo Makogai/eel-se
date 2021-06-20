@@ -20550,10 +20550,10 @@
   .dark-edition .card .card-body .card-category+.card-title {
     color: #fff;
   }
-  
+  /*Here to change header color-letters in upper 3 cards*/
   .dark-edition .card .card-body .card-category,
   .dark-edition .card .card-body .card-title {
-    color: #8b92a9;
+    color: white;
   }
   
   .dark-edition .card .card-body .card-description {

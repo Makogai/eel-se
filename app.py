@@ -2,6 +2,7 @@ import eel
 import random
 from datetime import datetime
 from instagram import get_user
+from link_shortener import get_url
 
 eel.init('web')
 
@@ -9,6 +10,11 @@ eel.init('web')
 def get_profile(username):
     # get_user("makogai")
     eel.instagram_show(get_user(username))
+
+@eel.expose
+def get_shortened_url(link):
+    # get_user("makogai")
+    eel.shorten_link(get_url(link))
 
 @eel.expose
 def get_random_number():
