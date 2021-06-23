@@ -42,6 +42,10 @@ def decrypt_as(text):
 def encrypt_am(text,secret):
     eel.encrypt_am_js(AlphaMix(text,secret).encrypt())
 
+@eel.expose
+def decrypt_am(text,secret):
+    eel.decrypt_am_js(AlphaMix(text,secret).decrypt())
+
 
 page = "index.html"
 def close_callbacka(page, sockets):

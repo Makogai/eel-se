@@ -26,7 +26,7 @@ class AlphaShift:
 class AlphaMix:
     def __init__(self,text, key):
         self.text = text
-        self.secret_key = key
+        self.secret_key = int(key)
         self.alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     def encrypt(self):
         new_message = ""

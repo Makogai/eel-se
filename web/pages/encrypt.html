@@ -95,13 +95,22 @@
         
         </div>
         <div class="tab-pane" id="tabs-2" role="tabpanel">
-          <p class="mb-1">Type in your text and secret code (used for decrypting)</p>
-          
+          <p class="mb-1">Type in your text</p>
           <input
             type="text"
             class="mt-0"
             id="text_am"
             placeholder="Type in your text.."
+            autocomplete="off"
+            required
+          />
+          <p class="mb-1">Type in your secret code (used for decrypting)</p>
+          <input
+            type="number"
+            class="mt-0"
+            id="secret_am"
+            value="1"
+            placeholder="Type in your secret.."
             autocomplete="off"
             required
           />
