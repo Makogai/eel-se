@@ -53,11 +53,16 @@
       .tab-pane input {
         width: 100%;
       }
+      #result_as,#result_am{
+        border: none!important;
+        color: white;
+    }
     </style>
   </head>
   <body class="bg-main">
     <h2 class="header color-main mb-4">Python Text Encrypter</h2>
     <div class="wrapper">
+      <div class="loader invisible"></div>
       <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
           <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
@@ -73,22 +78,38 @@
       <!-- Tab panes -->
       <div class="tab-content mt-3">
         <div class="tab-pane active" id="tabs-1" role="tabpanel">
-          <p class="mb-1">Unesite tekst</p>
+          <p class="mb-1">Type in your text</p>
           <input
             type="text"
             class="mt-0"
-            id="link"
-            name="link"
+            id="text_as"
             placeholder="Type in your text.."
             autocomplete="off"
             required
           />
           <br />
-          <button class="btn btn-main mt-2" style="border-color: rgb(21, 31, 46);" id="encrypt"><i class="fas fa-lock"></i> Encrypt</button>
-          <button class="btn btn-main mt-2" style="border-color: rgb(21, 31, 46);" id="decrypt"><i class="fas fa-lock-open"></i> Decrypt</button>
+          <button class="btn btn-main mt-2" style="border-color: rgb(21, 31, 46);" id="encrypt_as"><i class="fas fa-lock"></i> Encrypt</button>
+          <button class="btn btn-main mt-2" style="border-color: rgb(21, 31, 46);" id="decrypt_as"><i class="fas fa-lock-open"></i> Decrypt</button>
+          <h4 class="description mt-3" >Result</h4>
+        <input type="text" id="result_as" disabled>
+        
         </div>
         <div class="tab-pane" id="tabs-2" role="tabpanel">
-          <p>Second Panel</p>
+          <p class="mb-1">Type in your text and secret code (used for decrypting)</p>
+          
+          <input
+            type="text"
+            class="mt-0"
+            id="text_am"
+            placeholder="Type in your text.."
+            autocomplete="off"
+            required
+          />
+          <br />
+          <button class="btn btn-main mt-2" style="border-color: rgb(21, 31, 46);" id="encrypt_am"><i class="fas fa-lock"></i> Encrypt</button>
+          <button class="btn btn-main mt-2" style="border-color: rgb(21, 31, 46);" id="decrypt_am"><i class="fas fa-lock-open"></i> Decrypt</button>
+          <h4 class="description mt-3" >Result</h4>
+        <input type="text" id="result_am" disabled>
         </div>
       </div>
     </div>
@@ -97,4 +118,5 @@
       <i class="fas fa-arrow-left"></i> Dashboard
     </a>
   </body>
+  <script src="../js/encrypt.js"></script>
 </html>

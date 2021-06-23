@@ -4,6 +4,7 @@ from datetime import datetime
 from python.scripts.instagram import get_user
 from python.scripts.link_shortener import get_url
 from python.scripts.snake_hs import get_hs
+from python.scripts.encrypt import AlphaShift,AlphaMix
 
 eel.init('web')
 
@@ -29,13 +30,29 @@ def snake():
     # get_user("makogai")
     play_snake_menu()
 
+@eel.expose
+def encrypt_as(text):
+    eel.encrypt_as_js(AlphaShift(text).encrypt())
 
+@eel.expose
+def decrypt_as(text):
+    eel.decrypt_as_js(AlphaShift(text).decrypt())
+
+@eel.expose
+def encrypt_am(text,secret):
+    eel.encrypt_am_js(AlphaMix(text,secret).encrypt())
+
+
+page = "index.html"
+def close_callbacka(page, sockets):
+            pass
 
 my_options = {
-    'mode': "chrome", #or "chrome-app",
     'host': 'localhost',
     'port': 8080,
-    'chromeFlags': ["--start-fullscreen", "--browser-startup-dialog"]
+    'close_callback': close_callbacka,
+    'all_interfaces':True,
+    'block': False
 }
 
 eel.start('index.html', option=my_options)
