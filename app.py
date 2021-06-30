@@ -1,8 +1,10 @@
 import eel
 import random
 from datetime import datetime
-from instagram import get_user
-from link_shortener import get_url
+from python.scripts.instagram import get_user
+from python.scripts.link_shortener import get_url
+from python.scripts.snake_hs import get_hs
+from python.scripts.encrypt import AlphaShift,AlphaMix
 
 eel.init('web')
 
@@ -16,23 +18,49 @@ def get_shortened_url(link):
     # get_user("makogai")
     eel.shorten_link(get_url(link))
 
-@eel.expose
-def get_random_number():
-    eel.prompt_alerts(random.randint(1, 100))
 
 @eel.expose
-def get_date():
-    eel.prompt_alerts(datetime.now().strftime("%d/%m/%Y %H:%M:%S"))
+def snake_hs():
+    # get_user("makogai")
+    eel.snake_fill_hs(get_hs())
 
 @eel.expose
-def get_ip():
-    eel.prompt_alerts('127.0.0.1')
+def snake():
+    from python.scripts.snake_game import play_snake_menu
+    # get_user("makogai")
+    play_snake_menu()
+@eel.expose
+def pdf():
+    from python.scripts import convert_pdf
+
+@eel.expose
+def encrypt_as(text):
+    eel.encrypt_as_js(AlphaShift(text).encrypt())
+
+@eel.expose
+def decrypt_as(text):
+    eel.decrypt_as_js(AlphaShift(text).decrypt())
+
+@eel.expose
+def encrypt_am(text,secret):
+    eel.encrypt_am_js(AlphaMix(text,secret).encrypt())
+
+@eel.expose
+def decrypt_am(text,secret):
+    eel.decrypt_am_js(AlphaMix(text,secret).decrypt())
+
+
+page = "index.html"
+def close_callbacka(page, sockets):
+            pass
 
 my_options = {
-    'mode': "chrome", #or "chrome-app",
     'host': 'localhost',
     'port': 8080,
-    'chromeFlags': ["--start-fullscreen", "--browser-startup-dialog"]
+    'close_callback': close_callbacka,
+    'all_interfaces':True,
+    'block': False
 }
 
 eel.start('index.html', option=my_options)
+# eel.start('index.html', option=my_options)

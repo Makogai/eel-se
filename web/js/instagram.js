@@ -73,7 +73,7 @@ tippy('.check', {
   });
 tippy('.lock', {
     content: 'Private account',
-    placement: 'right',
+    placement: 'left',
   });
 
   var input = document.getElementById("username");

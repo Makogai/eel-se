@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PyFy Encrypt</title>
+    <script type="text/javascript" src="/eel.js"></script>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+    />
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+
+    <style>
+      .nav-tabs .nav-link.active {
+        color: #fff !important;
+        background: rgb(0, 131, 226);
+        background: linear-gradient(
+          90deg,
+          rgba(0, 131, 226, 1) 0%,
+          rgba(1, 169, 156, 1) 100%
+        );
+        border-color: rgb(21, 31, 46);
+        border-bottom-color: rgba(159, 173, 189);
+        transition: 0.2s ease all;
+      }
+      .wrapper {
+        width: 420px;
+      }
+      .nav-link {
+        transition: 0.2s all ease;
+      }
+      .nav-link:hover {
+        color: #007bff;
+      }
+      .nav-tabs {
+        border-bottom: 1px solid rgb(159, 173, 189);
+      }
+      .tab-pane input {
+        width: 100%;
+      }
+      #result_as,#result_am{
+        border: none!important;
+        color: white;
+    }
+    </style>
+  </head>
+  <body class="bg-main">
+    <h2 class="header color-main mb-4">Python Text Encrypter</h2>
+    <div class="wrapper">
+      <div class="loader invisible"></div>
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
+            >Alpha Shifter</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab"
+            >Alpha Mixer</a
+          >
+        </li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content mt-3">
+        <div class="tab-pane active" id="tabs-1" role="tabpanel">
+          <p class="mb-1">Type in your text</p>
+          <input
+            type="text"
+            class="mt-0"
+            id="text_as"
+            placeholder="Type in your text.."
+            autocomplete="off"
+            required
+          />
+          <br />
+          <button class="btn btn-main mt-2" style="border-color: rgb(21, 31, 46);" id="encrypt_as"><i class="fas fa-lock"></i> Encrypt</button>
+          <button class="btn btn-main mt-2" style="border-color: rgb(21, 31, 46);" id="decrypt_as"><i class="fas fa-lock-open"></i> Decrypt</button>
+          <h4 class="description mt-3" >Result</h4>
+        <input type="text" id="result_as" disabled>
+        
+        </div>
+        <div class="tab-pane" id="tabs-2" role="tabpanel">
+          <p class="mb-1">Type in your text</p>
+          <input
+            type="text"
+            class="mt-0"
+            id="text_am"
+            placeholder="Type in your text.."
+            autocomplete="off"
+            required
+          />
+          <p class="mb-1">Type in your secret code (used for decrypting)</p>
+          <input
+            type="number"
+            class="mt-0"
+            id="secret_am"
+            value="1"
+            placeholder="Type in your secret.."
+            autocomplete="off"
+            required
+          />
+          <br />
+          <button class="btn btn-main mt-2" style="border-color: rgb(21, 31, 46);" id="encrypt_am"><i class="fas fa-lock"></i> Encrypt</button>
+          <button class="btn btn-main mt-2" style="border-color: rgb(21, 31, 46);" id="decrypt_am"><i class="fas fa-lock-open"></i> Decrypt</button>
+          <h4 class="description mt-3" >Result</h4>
+        <input type="text" id="result_am" disabled>
+        </div>
+      </div>
+    </div>
+
+    <a class="dashboard" href="../index.html">
+      <i class="fas fa-arrow-left"></i> Dashboard
+    </a>
+  </body>
+  <script src="../js/encrypt.js"></script>
+</html>

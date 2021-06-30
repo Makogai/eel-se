@@ -10,17 +10,36 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-
+<style>
+    .profile:after{
+        height: 0!important;
+    }
+    .wrapper input{
+        width: 100%!important;
+        border: none!important;
+        color: white;
+    }
+    .description{
+        margin-bottom: 0.2rem!important;
+    }
+</style>
 </head>
-<body>
-<h2 class="header">Link shortener</h2>
-	  <input type="text" id="username" name="username" placeholder="Type in your username.." autocomplete="off" required />
+<body class="bg-main">
+<h2 class="header color-main">Link shortener</h2>
+	  <input type="text" id="link" name="link" placeholder="Type in your link.." autocomplete="off" required />
 
           <button id="get_data">Shorten link</button>
 <div class="wrapper">
 	<div class="loader invisivle"></div>
 	<div class="profile">
-		<h3 class="description result"></h3>
+		<h3 class="description" >Tinyurl</h3>
+        <input type="text" id="tinyurl" disabled>
+		<h3 class="description" >Dagd</h3>
+        <input type="text" id="dagd" disabled>
+		<h3 class="description" >Osdb</h3>
+        <input type="text" id="osdb" disabled>
+		<h3 class="description" >AdFly</h3>
+        <input type="text" id="adfly" disabled>
 	</div>
 </div>
 

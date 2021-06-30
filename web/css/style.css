@@ -1,0 +1,107 @@
+:root {
+    --color-background: 11, 22, 34;
+    --color-foreground: 21, 31, 46;
+    --color-foreground-grey: 15, 22, 31;
+    --color-foreground-grey-dark: 6, 12, 19;
+    --color-foreground-blue: 15, 22, 31;
+    --color-foreground-blue-dark: 6, 12, 19;
+    --color-text: 159, 173, 189;
+    --color-text-light: 114, 138, 161;
+    --color-text-lighter: 133, 150, 165;
+    --color-shadow-blue: 0, 5, 15;
+    --color-background-1200: 251, 251, 251;
+    --color-background-1100: 240, 243, 246;
+    --color-background-1000: 221, 230, 238;
+    --color-background-900: 201, 215, 227;
+    --color-background-800: 173, 192, 210;
+    --color-background-700: 139, 160, 178;
+    --color-background-600: 116, 136, 153;
+    --color-background-500: 100, 115, 128;
+    --color-background-400: 81, 97, 112;
+    --color-background-300: 30, 42, 56;
+    --color-background-100: 21, 31, 46;
+    --color-background-200: 11, 22, 34;
+    --color-gray-1200: 251, 251, 251;
+    --color-gray-1100: 240, 243, 246;
+    --color-gray-1000: 221, 230, 238;
+    --color-gray-900: 201, 215, 227;
+    --color-gray-800: 173, 192, 210;
+    --color-gray-700: 139, 160, 178;
+    --color-gray-600: 116, 136, 153;
+    --color-gray-500: 100, 115, 128;
+    --color-gray-400: 81, 97, 112;
+    --color-gray-300: 30, 42, 56;
+    --color-gray-100: 21, 31, 46;
+    --color-gray-200: 11, 22, 34;
+}
+
+.bg-main {
+    background-color: rgb(var(--color-background));
+}
+.a{
+    background-color: #9fadbd;
+}
+
+.bg-secondary {
+    background-color: rgb(var(--color-foreground));
+}
+
+.navbar-fixed {
+    position: fixed !important;
+    width: 100%;
+}
+
+.z-1 {
+    z-index: 111;
+}
+
+.banner-container {
+    height: 300px;
+    background-image: url("../assets/images/bg.svg");
+    background-position: top right;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 83%, 0 100%);
+}
+
+.banner-image {
+    height: 100%;
+}
+
+
+.navbar .active {
+    border-bottom: 2px solid white;
+}
+
+.mt-10 {
+    margin-top: 10rem;
+}
+
+.text-bigger{
+    font-size: 3rem;
+}
+
+.text-regular{
+    font-size: 2rem;
+}
+
+.text-bigger{
+    font-size: 3rem;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 5px #0000004f;
+}
+
+
+.btn-main {
+    color: #fff!important;
+    background: rgb(0,131,226);
+background: linear-gradient(90deg, rgba(0,131,226,1) 0%, rgba(1,169,156,1) 100%);
+    /* border-color: #4183D7; */
+    border-color: rgb(var(--color-foreground));
+    transition: 0.2s ease all;
+}
+
+.btn-main:hover {
+    opacity: 0.8;
+}
