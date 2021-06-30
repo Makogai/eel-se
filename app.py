@@ -32,6 +32,9 @@ def snake():
 @eel.expose
 def pdf():
     from python.scripts import convert_pdf
+@eel.expose
+def image():
+    from python.scripts import images
 
 @eel.expose
 def encrypt_as(text):
