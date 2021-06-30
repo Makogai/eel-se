@@ -12,6 +12,13 @@ document.getElementById("pdfconvertor").addEventListener(
     },
     false
   );
+document.getElementById("image").addEventListener(
+    "click",
+    () => {
+      eel.image();
+    },
+    false
+  );
   
   
   tippy('#snake_hs', {
