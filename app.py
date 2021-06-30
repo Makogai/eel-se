@@ -29,6 +29,9 @@ def snake():
     from python.scripts.snake_game import play_snake_menu
     # get_user("makogai")
     play_snake_menu()
+@eel.expose
+def pdf():
+    from python.scripts import convert_pdf
 
 @eel.expose
 def encrypt_as(text):

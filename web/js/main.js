@@ -5,6 +5,13 @@ document.getElementById("snake").addEventListener(
     },
     false
   );
+document.getElementById("pdfconvertor").addEventListener(
+    "click",
+    () => {
+      eel.pdf();
+    },
+    false
+  );
   
   
   tippy('#snake_hs', {
