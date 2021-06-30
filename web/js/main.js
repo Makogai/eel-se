@@ -2,7 +2,6 @@
 document.getElementById("snake").addEventListener(
   "click",
   () => {
-      alert("Radi");
       eel.snake();
     },
     false
