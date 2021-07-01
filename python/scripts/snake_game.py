@@ -119,7 +119,7 @@ def play_snake(difficulty,user_name):
 
                 #Overwriting highscore
                 if score > get_highscore():
-                    messagebox.showinfo('Čestitamo!','Novi Highscore!')
+                    messagebox.showinfo('Congratuations!','New Highscore!')
                     add_hs_to_db(score)
 
                     pygame.display.update()

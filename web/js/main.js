@@ -5,6 +5,13 @@ document.getElementById("snake").addEventListener(
     },
     false
   );
+document.getElementById("race").addEventListener(
+    "click",
+    () => {
+      eel.race();
+    },
+    false
+  );
 document.getElementById("pdfconvertor").addEventListener(
     "click",
     () => {

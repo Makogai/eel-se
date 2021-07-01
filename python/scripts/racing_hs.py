@@ -1,4 +1,4 @@
-def get_snake_hs():
+def get_race_hs():
     import mysql.connector
     import os
     from dotenv import load_dotenv
@@ -15,7 +15,7 @@ def get_snake_hs():
                                 database=db_db)
     cursor = cnx.cursor()
 
-    query = ("SELECT username,score from snake_highscores ORDER BY score DESC LIMIT 5")
+    query = ("SELECT username,score from racing_highscores ORDER BY score DESC LIMIT 5")
 
 
     cursor.execute(query)
