@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyFy</title>
+    <script type="text/javascript" src="/eel.js"></script>
+</head>
+<style>
+    h1{
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 15px;
+}
+table{
+  width:100%;
+  table-layout: fixed;
+}
+.tbl-header{
+  background-color: #5794ff;
+ }
+.tbl-content{
+  height:100%;
+  
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+}
+td{
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+
+/* demo styles */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+body{
+  background: #1a2035;
+  background: #1a2035;
+  font-family: 'Roboto', sans-serif;
+}
+section{
+  margin: 50px;
+}
+
+
+/* follow me template */
+.made-with-love {
+  margin-top: 40px;
+  padding: 10px;
+  clear: left;
+  text-align: center;
+  font-size: 10px;
+  font-family: arial;
+  color: #fff;
+}
+.made-with-love i {
+  font-style: normal;
+  color: #F50057;
+  font-size: 14px;
+  position: relative;
+  top: 2px;
+}
+.made-with-love a {
+  color: #fff;
+  text-decoration: none;
+}
+.made-with-love a:hover {
+  text-decoration: underline;
+}
+
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+} 
+.bn632-hover {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:hover {
+  background-position: 100% 0;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
+  outline: none;
+}
+
+.bn632-hover.bn26 {
+    background-image: linear-gradient(
+      to right,
+      #25aae1,
+      #4481eb,
+      #04befe,
+      #3f86ed
+    );
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  }
+a{
+    color:#84affa
+}
+</style>
+<body>
+    <section>
+      <a href="../index.html"><button class="bn632-hover bn26">Nazad</button></a>
+        <!--for demo wrap-->
+        <h1>Korišćeni paketi</h1>
+        <div class="tbl-header">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+              <tr>
+                <th>Ime</th>
+                <th>Verzija</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="tbl-content">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <tbody>
+              <tr>
+                <td>Pygame</td>
+                <td>2.0.1 </td>
+                <td><a href="https://pypi.org/project/pygame/">https://pypi.org/project/pygame/</a></td>
+                
+              </tr>
+              <tr>
+                <td>Requests</td>
+                <td>2.24.0</td>
+                <td><a href="https://pypi.org/project/requests/">https://pypi.org/project/requests/</a></td>
+                
+              </tr>
+              <tr>
+                <td>Instaloader</td>
+                <td>4.7.1</td>
+                <td><a href="https://pypi.org/project/instaloader/">https://pypi.org/project/instaloader/</a></td>
+               
+              </tr>
+              <tr>
+                <td>Pygame_menu</td>
+                <td>4.1.0</td>
+                <td><a href="https://pypi.org/project/pygame-menu/">https://pypi.org/project/pygame-menu/</a></td>
+               
+              </tr>
+              <tr>
+                <td>Pyshorteners</td>
+                <td>1.0.1</td>
+                <td><a href="https://pypi.org/project/pyshorteners/">https://pypi.org/project/pyshorteners/</a></td> 
+              </tr>
+              <tr>
+                <td>Fpdf</td>
+                <td>1.7.2</td>
+                <td><a href="https://pypi.org/project/fpdf/">https://pypi.org/project/fpdf/</a></td>
+              </tr>
+              <tr>
+                <td>Mysql_connector_repackaged</td>
+                <td>0.3.1</td>
+                <td><a href="https://pypi.org/project/mysql-connector-repackaged/">https://pypi.org/project/mysql-connector-repackaged/</a></td>
+              </tr>
+              <tr>
+                <td>Pillow</td>
+                <td>8.3.0</td>
+                <td><a href="https://pypi.org/project/Pillow/">https://pypi.org/project/Pillow/</a></td>
+              </tr>
+              <tr>
+                <td>Python-dotenv</td>
+                <td>0.18.0</td>
+                <td><a href="https://pypi.org/project/python-dotenv/">https://pypi.org/project/python-dotenv/</a></td>
+              </tr>
+              <tr>
+                <td>Mysqlclinet</td>
+                <td>2.0.3</td>
+                <td><a href="https://pypi.org/project/mysqlclient/">https://pypi.org/project/mysqlclient/</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+</body>
+</html>
