@@ -1,9 +1,10 @@
-pyinstaller==4.2
-requests==2.25.1
-Eel==0.14.0
-instaloader==4.7.1
 pygame==2.0.1
-pygame-menu==4.1.0
-mysql==0.0.2
-mysql-connector-python==8.0.23
+requests==2.24.0
+instaloader==4.7.1
+pygame_menu==4.1.0
+pyshorteners==1.0.1
+fpdf==1.7.2
+mysql_connector_repackaged==0.3.1
+Pillow==8.3.0
+python-dotenv==0.18.0
 mysqlclient==2.0.3
