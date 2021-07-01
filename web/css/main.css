@@ -102,7 +102,6 @@ body {
 
 input {
   width: 320px;
-  float: left;
   clear: both;
   margin: 10px 0;
   padding: 10px 10px;
@@ -127,7 +126,6 @@ form input[type=text]:focus {
   border-radius: 20px;
   cursor: pointer;
   display: inline-block;
-  float: right;
   clear: right;
   transition: 0.2s ease all;
   background: linear-gradient(to bottom right, #6452E9, #639FF9);
@@ -152,7 +150,7 @@ form input[type=text]:focus {
   border-radius: 10px;
   z-index: 1000;
   transition: 0.5s all;
-  background-image: url("../assets/images/loader.svg");
+  background-image: url("../assets/images/loader.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 40%;
@@ -209,7 +207,6 @@ form input[type=text]:focus {
   border-radius: 20px;
   cursor: pointer;
   display: inline-block;
-  float: right;
   clear: right;
   transition: 0.2s ease all;
   background: linear-gradient(to bottom right, #6452E9, #639FF9);

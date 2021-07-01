@@ -1,4 +1,4 @@
-def get_hs():
+def get_snake_hs():
     import mysql.connector
     import os
     from dotenv import load_dotenv

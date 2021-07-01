@@ -60,14 +60,14 @@
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="#" id="snake">
-              <i class="fas fa-gamepad"></i>
-              <p>Igrice</p>
+              <img src="./assets/images/snake.svg" height="25" width="25" style="display: inline-block;">
+              <p style="display: inline-block; margin-left: 10px;">Snake</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./pages/encrypt.html">
-              <i class="fas fa-key"></i>
-              <p>Enkriptor/Dekriptor</p>
+            <a class="nav-link" href="#!" id="race">
+              <i class="fas fa-flag-checkered"></i>
+              <p>Race igrica</p>
             </a>
           </li>
           <li class="nav-item ">
@@ -95,9 +95,21 @@
             </a>
           </li>
           <li class="nav-item ">
+            <a class="nav-link" href="./pages/encrypt.html">
+              <i class="fas fa-key"></i>
+              <p>Enkriptor/Dekriptor</p>
+            </a>
+          </li>
+          <li class="nav-item ">
             <a class="nav-link" href="./pages/snake.html" >
               <i class="fas fa-trophy"></i>
               <p>Snake Leaderboard</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./pages/race.html" >
+              <i class="fas fa-car"></i>
+              <p>Race Leaderboard</p>
             </a>
           </li>
         </ul>
@@ -148,16 +160,16 @@
               </a>
             </div>
             <div class="col-xl-4 col-lg-12">
-              <a href="./pages/encrypt.html">
+              <a href="#!" id="imageeditor">
                 <div>
                   <div class="okvir card card-chart">
                     <div class="okvirspan"></div>
                     <div class=" card-header-warning">
-                      <img src="../assets/images/enc.jpg" class="image">
+                      <img src="../assets/images/pe.jpg" class="image">
                     </div>
                     <div class="card-body">
                       <h4 class="card-title">Program</h4>
-                      <p class="card-category">Enkriptor/Dekriptor</p>
+                      <p class="card-category">Photo Editor</p>
                     </div>
                     <div class="card-footer">
                       <div class="stats">
@@ -170,16 +182,16 @@
             </a>
          
             <div class="col-xl-4 col-lg-12" >
-              <a href="#!"id="imageeditor" >
+              <a href="#!"id="race1" >
                 <div class="okvir card card-chart">
                   <div class="okvirspan"></div>
                   <div class="card-header card-header-green">
-                    <img src="../assets/images/pe.jpg" class="image">
+                    <img src="../assets/images/race.jpg" class="image">
                   </div>
                   <div class="card-body">
-                    <h4 class="card-title">Programi</h4>
+                    <h4 class="card-title">Igrica</h4>
                     <p class="card-category">
-                      <span class="text-success">Photo Editor</span></p>
+                      <span class="text-success">Race Igrica</span></p>
                   </div>
                   <div class="card-footer">
                     <div class="stats">
@@ -394,6 +406,8 @@
         document.getElementById("imageeditor1").addEventListener("click", ()=>{ eel.image();});
         document.getElementById("pdfconvertor1").addEventListener("click", ()=>{ eel.pdf();});
         document.getElementById("pdfconvertor").addEventListener("click", ()=>{ eel.pdf();});
+        document.getElementById("race").addEventListener("click", ()=>{ eel.race();});
+        document.getElementById("race1").addEventListener("click", ()=>{ eel.race();});
       </script>
      <script>
       $(document).ready(function() {
